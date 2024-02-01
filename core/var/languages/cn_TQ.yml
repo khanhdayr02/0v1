@@ -1,0 +1,105 @@
+# _build.js
+build.start.varLoaded: "环境变量加载成功."
+build.start.exit: "清洁和退出..."
+build.start.serverStarted: "服务器在门户初始化{port} 有密码: {serverAdminPassword}"
+
+build.booting.logging: "当前登录..."
+build.booting.logged: "登录成功 - {botID}."
+
+build.startxConsole.terminalNotSupported: "Terminal {term} 不支持的."
+build.startxConsole.platformNotSupported: "不支持自动启动 xConsole 在平台上 {platform}."
+
+build.refreshState: "清爽 cookies..."
+build.refreshMqtt: "清爽 MQTT..."
+
+# checkAppstate.js
+modules.checkAppstate.parsingError: "file appstate 非法的 / 无法破译"
+modules.checkAppstate.noProtection: "保护 appstate 关闭"
+modules.checkAppstate.error.notSupported: "此环境不支持加密"
+modules.checkAppstate.error.noAppstate: "未找到 file appstate"
+modules.checkAppstate.foundAppstate: "找到了 file appstate"
+modules.checkAppstate.error.noKey: "未找到安全码 appstate"
+modules.checkAppstate.decrypting: "解码 file appstate..."
+modules.checkAppstate.encrypting: "加密 file appstate..."
+modules.checkAppstate.error.invalid: "file appstate 无效，请重新检查"
+
+# loader.js
+modules.loader.plugins.commands.error.nameExists: "命令名称 {name} 已经存在!"
+modules.loader.plugins.commands.error.noAliases: "没有可用的别名!"
+
+modules.loader.plugins.default.error.onCallNotExists: "缺少执行功能!"
+modules.loader.plugins.default.error.onCallNotFunction: "可执行变量不是函数!"
+modules.loader.plugins.default.error.noExport: "缺少有效数据!"
+modules.loader.plugins.default.error.onLoadFailed: "函数执行错误 onLoad: {error}"
+
+modules.loader.plugins.commands.error.failed: "无法加载命令 {fileName}, lỗi: {error}"
+modules.loader.plugins.onMessage.error.failed: "无法加载处理程序 {fileName}, lỗi: {error}"
+modules.loader.plugins.events.error.failed: "无法加载事件 {fileName}, lỗi: {error}"
+modules.loader.plugins.customs.error.failed: "无法加载自定义 {fileName}, lỗi: {error}"
+
+modules.loader.plugins.commands.loaded: "已加载 {commands}/{total} 命令"
+modules.loader.plugins.onMessage.loaded: "已加载{onMessage}/{total} 消息处理程序"
+modules.loader.plugins.events.loaded: "已加载 {events}/{total} sự kiện"
+modules.loader.plugins.customs.loaded: "推出{customs}/{total} 风俗"
+
+# handlers
+handlers.commands.nsfwNotAllowed: "该组不允许命令 nsfw."
+handlers.commands.noPermission: "您无权使用."
+handlers.default.error: "发生了错误: {error}"
+
+# resend
+plugins.resend.noMessage: "• {author} 刚刚删除了某条消息."
+plugins.resend.unsendNoMessageButAttach: "• {author} 刚刚删除 {attachmentsCount} 附件:"
+plugins.resend.unsendMessageAndAttach: "• {author} 刚刚删除了一条消息 {attachmentsCount} 附件:\n\n{message}"
+plugins.resend.unsendMessage: "• {author} 刚刚删除了一条消息:\n\n{message}"
+
+# Database
+database.mongo_url_not_found: "未找到环境变量 MONGO_URL"
+database.init: "初始化数据库 {database}..."
+#database.thread.get.success: "{threadID} - 新组"
+#database.user.get.success: "{userID} - 新用户"
+database.error: "访问数据库时发生错误: {error}"
+
+# events
+plugins.events.change_thread_image.userChangedThreadImage: "\"{author}\" 更改了集体照."
+plugins.events.change_thread_image.reversed: "\nThay 合照不允许更改，所以我把它改回旧的."
+plugins.events.change_thread_image.reversed_t: "[ ANTI ALERT ]\n合影不允许更改，所以我把它改回旧的!"
+plugins.events.change_thread_image.setNewImage: "\n 不允许更改集体照片，但由于没有旧照片，因此将使用新照片."
+
+plugins.events.subcribe.addSelf: "该机器人已添加到组中 \"{threadName}\" ({threadId}) 按用户\"{authorName}\" ({authorId})."
+plugins.events.subcribe.connected: "𝑫𝒊𝒕 𝒎𝒆 𝒍𝒖 𝒅𝒖 𝒕𝒂𝒈 𝒎𝒆 𝒂 𝒗𝒂 𝒃𝒐 𝒎𝒂𝒚 𝒅𝒆 /₫@ 𝑩𝒐𝒕 𝑵𝒊𝒏𝒉  ♛_"
+plugins.events.subcribe.error.createMonitor: "无法为此组创建主管组."
+plugins.events.subcribe.createdMonitor: "团体 {threadId} 将对该组中的行为进行监控"
+# plugins.events.subcribe.addMembers: "\"{authorName}\" ({authorId}) 添加 {membersLength} 成员：\n{members}"
+plugins.events.subcribe.welcome: "欢迎 {members} 来组 {threadName}!\n(Các) 你是第二位成员 {newCount} 团体的."
+plugins.events.subcribe.warns: "{username} 被警告3次被踢出群."
+
+plugins.events.unsubcribe.bot.left: "机器人已离开 \"{threadName}\" ({threadId})."
+plugins.events.unsubcribe.bot.kicked: "机器人已被踢出\"{threadName}\" ({threadId}) bởi \"{authorName}\" ({authorId})."
+# plugins.events.unsubcribe.left: "\"{leftName}\" ({leftId}) 已离开群组."
+# plugins.events.unsubcribe.kicked: "\"{leftName}\" ({leftId}) 被踢出了群组 \"{authorName}\" ({authorId})."
+plugins.events.unsubcribe.left: "{leftName} 已离开群组."
+plugins.events.unsubcribe.kicked: "{leftName} 被踢出了群."
+plugins.events.unsubcribe.antiOut.error: "[ ANTIOUT ] 无法将成员重新添加到群组中..."
+plugins.events.unsubcribe.antiOut.success: "[ ANTIOUT ] 重新将成员添加到组中!"
+
+plugins.events.thread-call.startedCall: "\"{authorName}\" ({authorId}) 打开群组通话."
+plugins.events.thread-call.startedVideoCall: "\"{authorName}\" ({authorId}) 打开群组视频通话."
+plugins.events.thread-call.endedCall: "通话结束，通话时间: {callDuration}."
+plugins.events.thread-call.endedVideoCall: "视频通话结束，通话时间: {callDuration}."
+plugins.events.thread-call.joinedCall: "\"{authorName}\" ({authorId}) 加入通话."
+plugins.events.thread-call.joinedVideoCall: "\"{authorName}\" ({authorId}) 加入视频通话."
+
+plugins.events.thread-update.name.changed: "\"{authorName}\" ({authorId}) 将群组名称更改为 \"{newName}\"."
+plugins.events.thread-update.name.reversed: "\n不允许更改群组名称，因此已更改旧名称."
+plugins.events.thread-update.name.reversed_t: "[ ANTI ALERT ] 不允许更改群组名称，因此已更改旧名称!"
+plugins.events.thread-update.color.changed: "\"{authorName}\" ({authorId}) 更改了词组主题的颜色 {oldColor} 豪华 {newColor}."
+plugins.events.thread-update.emoji.changed: "\"{authorName}\" ({authorId}) 改变了 emoji 词组{oldEmoji} 豪华 {newEmoji}."
+plugins.events.thread-update.approvalMode.changed: "\"{authorName}\" ({authorId}) 将会员审核模式更改为 {newApprovalMode}."
+plugins.events.thread-update.admins.added: "\"{authorName}\" ({authorId}) 添加 \"{targetName}\" ({targetId}) 进入群组管理."
+plugins.events.thread-update.admins.removed:  "\"{authorName}\" ({authorId}) 已删除 \"{targetName}\" ({targetId}) 来自群组管理员."
+
+plugin.events.user-nickname.changedBy: "\"{authorName}\" ({authorId}) 更改了昵称\"{targetName}\" ({targetId}) 墙 \"{newNickname}\"."
+plugin.events.user-nickname.changedBySelf: "\"{authorName}\" ({authorId}) 将他的昵称改为 \"{newNickname}\"."
+plugin.events.user-nickname.reversed: "\n 不允许更改昵称，所以我把它改回原来的昵称."
+plugin.events.user-nickname.reversed_t: "[ ANTI ALERT ] 不允许更改昵称，所以我把它改回原来的昵称!"
